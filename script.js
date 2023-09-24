@@ -13,7 +13,7 @@ function updateClock() {
   const seconds = now.getSeconds();
   time.innerText = `${hours}: ${minutes}: ${seconds}`;
   // Calculate the degree of rotation for each hand
-  const hourRotation = (360 / 12) * ((hours+15) % 12) + (360 / 12) * ((minutes+15) / 60);
+  const hourRotation = (360 / 12) * ((hours+15) % 12) + (360 / 12) * (minutes / 60);
   const minuteRotation = (360 / 60) * (minutes+15) + (360 / 60) * (seconds / 60);
   const secondRotation = (360 / 60) * (seconds+15);
 
